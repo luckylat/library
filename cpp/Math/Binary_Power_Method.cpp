@@ -1,3 +1,4 @@
+#include <iostream>
 using namespace std;
 //B
 template <typename T>

@@ -1,7 +1,8 @@
 //yukicoder@cpp14
-//author:luckYrat(twitter:@luckYrat_)
-//競技プログラミングから逃げるな
-//https://www.youtube.com/watch?v=z_B9iJ8r4ic
+//coder:luckYrat(twitter:@luckYrat_)
+//dijkstraから逃げるな
+//おすすめの曲
+//https://soundcloud.com/wakadori/nighttheater
 
 //せんげん！
 #include <iostream>
@@ -43,6 +44,7 @@ const double EPS = (1e-10);
 
 //みじかく！
 #define pb push_back
+#define mkp make_pair
 #define fir first
 #define scn second
 #define ednl endl
@@ -53,8 +55,8 @@ const double EPS = (1e-10);
 #define yesno(a) (a?"yes":"no")
 
 //きんぼーnほーこー！！
-P ar4[4] = {{0,1},{0,-1},{1,0},{-1,0}};
-P ar8[8] = {{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
+P ar4[4] = {mkp(0,1),mkp(0,-1),mkp(1,0),mkp(-1,0)};
+P ar8[8] = {mkp(-1,-1),mkp(-1,0),mkp(-1,1),mkp(0,-1),mkp(0,1),mkp(1,-1),mkp(1,0),mkp(1,1)};
 /*
 確認ポイント
 cout << fixed << setprecision(n) << 小数計算//n桁の小数表記になる
@@ -69,5 +71,6 @@ void initial() {
  ios::sync_with_stdio(false);
 }
 int main(){
-	
+  
+  return 0;
 }
