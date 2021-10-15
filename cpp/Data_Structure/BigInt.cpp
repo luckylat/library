@@ -2,6 +2,12 @@
 #include <algorithm>
 #include <string>
 using namespace std;
+/*
+BigInt
+
+可能な演算: "+", "-", "*"
+
+*/
 //S
 struct BigInt{
   string val;

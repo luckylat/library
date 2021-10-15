@@ -57,6 +57,7 @@ const double EPS = (1e-10);
 //きんぼーnほーこー！！
 P ar4[4] = {mkp(0,1),mkp(0,-1),mkp(1,0),mkp(-1,0)};
 P ar8[8] = {mkp(-1,-1),mkp(-1,0),mkp(-1,1),mkp(0,-1),mkp(0,1),mkp(1,-1),mkp(1,0),mkp(1,1)};
+P x[3] = {{1,2},{2,3},{3,5}};
 /*
 確認ポイント
 cout << fixed << setprecision(n) << 小数計算//n桁の小数表記になる
