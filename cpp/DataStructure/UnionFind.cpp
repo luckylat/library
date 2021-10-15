@@ -1,7 +1,3 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
 //B
 struct UnionFind {
   vector<int> par;

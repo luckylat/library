@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
-#include "../../Cpp/_Template/Template.cpp"
+#include "../../Cpp/Template/Template.cpp"
 
 #include "../../Cpp/Data_Structure/UnionFind.cpp"
 
