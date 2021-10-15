@@ -16,8 +16,3 @@ T uPow(T z,T n, T mod){
   return ans;
 }
 //E
-
-int main(){//https://atcoder.jp/contests/atc002/submissions/9878231
-  long long n,m,p;cin>>n>>m>>p;
-  cout << uPow(n,p,m) << endl;
-}

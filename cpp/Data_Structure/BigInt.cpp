@@ -171,8 +171,3 @@ struct BigInt{
 };
 using bigint = BigInt;
 //E
-
-int main(){
-  bigint a,b;cin>>a>>b;
-  cout << a-b << endl;
-}

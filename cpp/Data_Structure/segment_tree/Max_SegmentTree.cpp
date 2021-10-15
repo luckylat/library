@@ -34,16 +34,3 @@ struct SegmentTree{
     }
 };
 //E
-
-int main(){
-  int N,Q;cin>>N>>Q;
-  SegmentTree<
-  for(int i = 0; N > i; i++){
-    int c,x,y;cin>>c>>x>>y;
-    if(c){
-      //query
-    }else{
-      //update
-    }
-  }
-}

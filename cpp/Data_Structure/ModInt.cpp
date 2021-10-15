@@ -70,22 +70,3 @@ struct ModInt{
   }
 };
 using mint = ModInt<mod>;
-//E
-int main(){//https://atcoder.jp/contests/abc156/submissions/10514541
-  int n,a,b;cin>>n>>a>>b;
-  mint z = 2;
-  z = z.pow(n)-1;
-  mint tmp = 1;
-  for(int i = 1; a >= i; i++){
-    tmp *= (n-a+i);
-    tmp /= i;
-  }
-  z -= tmp;
-  tmp = 1;
-  for(int i = 1; b >= i; i++){
-    tmp *= (n-b+i);
-    tmp /= i;
-  }
-  cout << z-tmp << endl;
-  
-}

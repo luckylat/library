@@ -17,15 +17,4 @@ struct SieveEratos{
   bool operator[](int x){return t[x];}
 };
 //E
-int main(){//https://atcoder.jp/contests/abc084/submissions/9536037
-  SieveEratos a(100010);
-  vector<int> r;
-  r.push_back(0);
-  for(int i = 1; 100000 >= i; i++)r.push_back(r[r.size()-1]+(a[i] && a[(i+1)/2]));
-  int q;cin>>q;
-  for(int i = 0; q > i; i++){
-    int y,z;cin>>y>>z;
-    cout << r[z]-r[y-1] << endl;
-  }
 
-}
