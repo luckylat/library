@@ -1,3 +1,4 @@
+ [![Actions Status](https://github.com/luckylat/luckYrat_library/workflows/verify/badge.svg)](https://github.com/luckylat/luckYrat_library/actions) 
 # luckYrat_compro-lib
 競技プログラミングのテンプレートです(coder:luckYrat)
 
