@@ -2,7 +2,7 @@
 
 #include "../../Cpp/Template/Template.cpp"
 
-#include "../../Cpp/Data_Structure/UnionFind.cpp"
+#include "../../Cpp/DataStructure/UnionFind.cpp"
 
 
 
