@@ -1,4 +1,6 @@
- [![Actions Status](https://github.com/luckylat/luckYrat_library/workflows/verify/badge.svg)](https://github.com/luckylat/luckYrat_library/actions) 
+[![Actions Status](https://github.com/luckylat/library/workflows/verify/badge.svg)](https://github.com/luckylat/library/actions)
+[![GitHub Pages](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://luckylat.github.io/library/)
+
 # luckYrat_compro-lib
 競技プログラミングのテンプレートです(coder:luckYrat)
 
