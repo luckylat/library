@@ -1,0 +1,7 @@
+define gcd(a,b){
+  if(a%b){
+    return (gcd(b,a%b))
+  }else{
+    return (b)
+  }
+}
