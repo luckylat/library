@@ -32,6 +32,3 @@ bool stringSize(const string&pf,string&ps){
 
 
 
-int main(){
-
-}
