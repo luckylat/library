@@ -2,9 +2,9 @@
 
 #include "../../cpp/template/template.cpp"
 
-#include "../../cpp/data-structure/union-find.cpp"
+#include "../../cpp/data-structure/lazy-binary-indexed-tree.cpp"
 
-int main(){//https://yukicoder.me/submissions/440699
+int main(){
   int n,q;cin>>n>>q;
   vector<long long> A(n);
   vector<long long> B(n);
