@@ -2,7 +2,7 @@
 
 #include "../../cpp/template/template.cpp"
 
-#include "../../cpp/data-structure/lazy-binary-indexed-tree.cpp"
+#include "../../cpp/data-structure/binary-indexed-tree-on-imos.cpp"
 
 int main(){
   int n,q;cin>>n>>q;
