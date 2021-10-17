@@ -1,9 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
-
 //B
 template<typename T>
 struct BIT{//1_Indexed

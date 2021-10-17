@@ -1,6 +1,3 @@
-#include <iostream>
-using namespace std;
-const int mod = 1000000007;
 //B
 template <int mod>
 struct ModInt{

@@ -1,6 +1,3 @@
-#include <vector>
-#include <iostream>
-using namespace std;
 //S
 struct SieveEratos{
   vector<bool> t;

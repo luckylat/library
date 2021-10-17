@@ -1,6 +1,3 @@
-#include <iostream>
-#include <map>
-using namespace std;
 //B
 template<typename T>
 pair<int,map<T,int>> Factorize(T n){

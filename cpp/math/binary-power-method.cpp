@@ -1,5 +1,3 @@
-#include <iostream>
-using namespace std;
 //B
 template <typename T>
 T uPow(T z,T n, T mod){
