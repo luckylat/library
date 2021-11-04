@@ -1,7 +1,7 @@
 //yukicoder@cpp14
 //coder:luckYrat(twitter:@luckYrat_)
 //dijkstraから逃げるな
-//おすすめの曲 無機質世界に彩りを-MisomyL
+//おすすめの曲 無機質世界に彩を-MisomyL
 //https://www.youtube.com/watch?v=8G590EiLQ3E
 
 //標準入出力
