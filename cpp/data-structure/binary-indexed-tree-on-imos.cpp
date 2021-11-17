@@ -1,4 +1,7 @@
-//B
+//********
+//これ嘘なので本当に気にしないでください
+//********
+
 template<typename T>
 struct lazyBIT{//1_Indexed
   int n;
@@ -35,4 +38,3 @@ struct lazyBIT{//1_Indexed
 
 
 };
-//E
