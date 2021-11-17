@@ -1,0 +1,2 @@
+exclude: ["ac-library"]
+theme: jekyll-shell-theme

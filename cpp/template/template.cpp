@@ -1,4 +1,4 @@
-//yukicoder@cpp14
+//yukicoder@cpp17
 //coder:luckYrat(twitter:@luckYrat_)
 //dijkstraから逃げるな
 //おすすめの曲 無機質世界に彩を-MisomyL
@@ -29,6 +29,8 @@
 #include <utility>
 #include <climits>
 
+
+#include <numeric>
 
 //なまえくーかん！
 using namespace std;

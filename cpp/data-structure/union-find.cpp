@@ -1,7 +1,7 @@
 //B
 struct UnionFind {
   vector<int> par;
-  UnionFind(int n) : par(n){
+  UnionFind(int n) : par((size_t)n,-1){
     for(int i = 0; n > i; i++)par[i] = i;
   }
 
