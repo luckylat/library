@@ -1,7 +1,8 @@
-//B
 struct UnionFind {
   vector<int> par;
-  UnionFind(int n) : par((size_t)n,-1){
+  vector<int> size_;
+  int n;
+  UnionFind(int n) : n(n), par((size_t)n), size_((size_t)n,1){
     for(int i = 0; n > i; i++)par[i] = i;
   }
 
@@ -14,14 +15,27 @@ struct UnionFind {
     int ra = root(a);
     int rb = root(b);
     if(ra==rb)return;
+    if(size(ra) > size(rb)) swap(ra,rb);
     par[ra] = rb;
+    size_[rb] += size_[ra];
   }
 
   bool same(int a, int b){
     return root(a) == root(b);
   }
+
+  int size(int a){
+    return size_[root(a)];
+  }
+  void debug(){
+    for(int i = 0; n > i; i++){
+      cout << size_[root(i)] << " ";
+    }
+    cout << endl;
+
+    return;
+  }
 };
-//E
 
 
 
