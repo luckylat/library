@@ -1,14 +1,17 @@
+#include <iostream>
+#include <vector>
+using namespace std;
 struct UnionFind {
+  int n;
   vector<int> par;
   vector<int> size_;
-  int n;
-  UnionFind(int n) : n(n), par((size_t)n), size_((size_t)n,1){
+  UnionFind(int n_) : n(n_), par((size_t)n_), size_((size_t)n_,1){
     for(int i = 0; n > i; i++)par[i] = i;
   }
 
-  int root(int n){
-    if(par[n] == n)return n;
-    return par[n] = root(par[n]);
+  int root(int x){
+    if(par[x] == x)return x;
+    return par[x] = root(par[x]);
   }
 
   void unite(int a,int b){
@@ -36,6 +39,3 @@ struct UnionFind {
     return;
   }
 };
-
-
-
