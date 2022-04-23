@@ -33,8 +33,8 @@ using ll = long long;
 using P = pair<ll,ll>;
 
 //てーすう！
-const ll MOD = 1000000007;
-const ll MOD9 = 998244353;
+const ll MOD = 998244353;
+const ll MODx = 1000000007;
 const int inf = (1<<30)-1;
 const ll linf = (1LL<<62LL)-1;
 const double EPS = (1e-10);
