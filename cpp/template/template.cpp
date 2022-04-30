@@ -1,6 +1,5 @@
 //yukicoder@cpp17
 
-//標準入出力
 #include <iostream>
 
 #include <cmath>
@@ -8,7 +7,6 @@
 
 #include <iomanip>
 
-//コンテナ系
 #include <string>
 #include <vector>
 #include <set>
@@ -18,7 +16,6 @@
 
 #include <bitset>
 
-//複素数
 #include <complex>
 
 #include <cctype>
@@ -27,32 +24,27 @@
 
 #include <numeric>
 
-//なまえくーかん！
 using namespace std;
 using ll = long long;
 using P = pair<ll,ll>;
 
-//てーすう！
 const ll MOD = 998244353;
 const ll MODx = 1000000007;
-const int inf = (1<<30)-1;
-const ll linf = (1LL<<62LL)-1;
+const int INF = (1<<30)-1;
+const ll LINF = (1LL<<62LL)-1;
 const double EPS = (1e-10);
 
-//でふぁいん！
 #define anyfill(n,s) setw(n) << setfill(s)
 #define loop(s) for(int (i) = 0; (s) > (i); (i)++)
 #define rep(i,q) for(int (i) = 0; (q) > (i); (i)++)
 #define repp(i,n,q) for(int (i) = (n); (q) > (i); (i)++)
 #define dep(i,q) for(int (i) = (q); 0 < (i); (i)--)
 
-//みじかく！
 #define pb push_back
 #define mkp make_pair
 #define fir first
 #define scn second
 
-//きんぼーnほーこー！！
 P ar4[4] = {mkp(0,1),mkp(0,-1),mkp(1,0),mkp(-1,0)};
 P ar8[8] = {mkp(-1,-1),mkp(-1,0),mkp(-1,1),mkp(0,-1),mkp(0,1),mkp(1,-1),mkp(1,0),mkp(1,1)};
 
@@ -70,16 +62,20 @@ count(iter,iter,int)でintがiterからiterの間にいくつあったかを取�
 */
 
 /*
-Below is function corner
+function corner below
 */
 
 
 /*
-Above is Function corner
+Function corner above
 */
 
 __attribute__((constructor))
 void initial() {
  cin.tie(0);
  ios::sync_with_stdio(false);
+}
+
+int main(){
+
 }

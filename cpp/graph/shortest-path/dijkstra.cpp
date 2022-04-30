@@ -1,15 +1,17 @@
+template<typename T>
 class dijkstra{
   struct vg{
-    int t,c;
+    int t;
+    T c;
   };
-  vector<int> cost;
+  vector<T> cost;
   void run(int x){
     auto comp = [](vg a,vg b){
       return a.c>b.c;
     };
     priority_queue<vg,vector<vg>,decltype(comp)> R{comp};
     for(int i = 0; n > i; i++){
-      cost[i] = INF;
+      cost[i] = -1;
     }
     cost[x] = 0;
     R.push({x,0});
@@ -17,7 +19,7 @@ class dijkstra{
       auto k = R.top();R.pop();
       if(cost[k.t] != k.c)continue;
       for(int i = 0; A[k.t].size() > i; i++){
-        if(cost[A[k.t][i].t] <= k.c+A[k.t][i].c)continue;
+        if(cost[A[k.t][i].t] != -1 && cost[A[k.t][i].t] <= k.c+A[k.t][i].c)continue;
         cost[A[k.t][i].t] = k.c+A[k.t][i].c;
         R.push({A[k.t][i].t,k.c+A[k.t][i].c});
       }

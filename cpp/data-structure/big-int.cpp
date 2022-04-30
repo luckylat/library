@@ -1,10 +1,3 @@
-/*
-BigInt
-
-可能な演算: "+", "-", "*"
-
-*/
-//S
 struct BigInt{
   string val;
   BigInt():val("0"){}
@@ -32,6 +25,9 @@ struct BigInt{
       p.val = p.val.substr(1,p.val.size()-1);
     }
     return p;
+  }
+  int size(){
+    return (*this).val.length();
   }
   BigInt SignTurn(BigInt p){
     if(p.val[0] == '-'){
@@ -143,13 +139,39 @@ struct BigInt{
   BigInt operator*=(const BigInt &p){
     BigInt z = *this;
     BigInt k = p;
-    bool hugo = false;
-    if((z.val[0] == '-') + (p.val[0] == '-') == 1)hugo = true;
-    z = abs(z);k = abs(k);
+    bool minus = false;
+    if((z.val[0] == '-') + (p.val[0] == '-') == 1)minus = true;
+    string Z = abs(z).val;
+    string K = abs(k).val;
+    //O(n^2)
+    reverse(Z.begin(),Z.end());
+    reverse(K.begin(),K.end());
+    vector<int> ret(Z.size()+K.size()+1,0);
+    for(int i = 0; Z.size() > i; i++){
+      for(int j = 0; K.size() > j; j++){
+        ret[i+j] += (Z[i]-'0')*(K[j]-'0');
+      }
+    }
+    for(int i = 0; ret.size() > i; i++){
+      ret[i+1] += ret[i]/10;
+      ret[i] = ret[i]%10;
+    }
+    while(ret[ret.size()-1] == '0')ret.pop_back();
+    reverse(ret.begin(),ret.end());
+
+    string val;
+    if(minus)val.push_back('-');
+    for(int i = 0; ret.size() > i; i++){
+      val.push_back(ret[i]+'0');
+    }
+    BigInt ans = (BigInt)val;
+    return (*this) = ans;
+
     
   }
   BigInt operator+(const BigInt &p){return (*this) += p;}
   BigInt operator-(const BigInt &p){return (*this) -= p;}
+  BigInt operator*(const BigInt &p){return (*this) *= p;}
 
   bool operator==(const BigInt &p){return val == p.val;}
   bool operator!=(const BigInt &p){return val != p.val;}
@@ -166,4 +188,3 @@ struct BigInt{
   }
 };
 using bigint = BigInt;
-//E
