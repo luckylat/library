@@ -1,4 +1,3 @@
-//B
 template <int mod>
 struct ModInt{
   int n;
@@ -66,4 +65,4 @@ struct ModInt{
 
   }
 };
-using mint = ModInt<mod>;
+using mint = ModInt<MOD>;
