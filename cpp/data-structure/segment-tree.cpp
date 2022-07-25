@@ -69,10 +69,10 @@ struct SegmentTree{
 
 template <typename T, typename F>
 SegmentTree<T, F> get_segment_tree(int N, const F &f, T initer){
-  return SegmentTree{N,f,initer};
+  return SegmentTree<T,F>{N,f,initer};
 }
 
 template <typename T, typename F>
 SegmentTree<T, F> get_segment_tree(int N, const F &f, T initer, vector<T> x){
-  return SegmentTree{N,f,initer,x};
+  return SegmentTree<T,F>{N,f,initer,x};
 }
