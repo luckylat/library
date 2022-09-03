@@ -61,8 +61,10 @@ function corner below
 Function corner above
 */
 
+/* comment outed because can cause bugs
 __attribute__((constructor))
 void initial() {
  cin.tie(0);
  ios::sync_with_stdio(false);
 }
+*/
