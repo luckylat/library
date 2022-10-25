@@ -13,18 +13,26 @@ class FloydWarshall {
 public:
   int n;
   vector<vector<long long>> dist;//MAX以上なら辺はなし
-  FloydWarshall(int n_,int MAX = 2e9+1):n(n_),MAX(MAX),dist(n_,vector<long long>(n_,MAX)){
+  FloydWarshall(int n_,long long MAX = 2e18+1):n(n_),MAX(MAX),dist(n_,vector<long long>(n_,MAX)){
   	for(int i = 0; n > i; i++){
       dist[i][i] = 0;
     }
   }
 
   //双方向
-  void push(int s,int v,int c){
+  void push(int s,int v,long long c){
+    dist[s][v] = min(dist[s][v],c);
+    dist[v][s] = min(dist[s][v],c);
+  }
+  void update(int s,int v,long long c){
     dist[s][v] = c;
     dist[v][s] = c;
   }
-  void push_p(int s,int v,int c){
+
+  void push_p(int s,int v,long long c){
+    dist[s][v] = min(dist[s][v],c);
+  }
+  void update_p(int s,int v,long long c){
     dist[s][v] = c;
   }
   
