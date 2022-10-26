@@ -1,4 +1,3 @@
-//B
 template<typename T>
 struct BIT{//1_Indexed
   int n;
@@ -20,4 +19,3 @@ struct BIT{//1_Indexed
   }
 
 };
-//E
