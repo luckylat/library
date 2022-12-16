@@ -46,6 +46,10 @@ public:
     run(x);
   }
 
+  vector<pair<int,int>> restoration(int t){
+    vector<pair<int,int>> Ret
+  }
+
   int operator[](int i){
     return cost[i];
   }
