@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
 
     - name: Install dependencies
       run: pip3 install -U online-judge-verify-helper
@@ -34,7 +34,7 @@ jobs:
 
     # required only if you want to verify Go code
     - name: Install dependencies (Go)
-      uses: actions/setup-go@v2
+      uses: actions/setup-go@v3
 
     - name: Set up Rust (1.42.0)
       uses: actions-rs/toolchain@v1
