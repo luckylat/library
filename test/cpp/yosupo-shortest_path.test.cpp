@@ -17,13 +17,13 @@ int main(){
   if(A[t] == INF)cout << -1 << endl;
   else{
     auto R = A.restoration(t);
-    if(R[0].first == -1){
+    if(R[0] == -1){
       cout << -1 << endl;
       return 0;
     }
-    cout << A[t] << " " << R.size() << endl;
-    for(int i = 0; R.size() > i; i++){
-      cout << R[i].first << " " << R[i].second << endl;
+    cout << A[t] << " " << R.size()-1 << endl;
+    for(int i = 0; R.size()-1 > i; i++){
+      cout << R[i] << " " << R[i+1] << endl;
     }
   }
 }

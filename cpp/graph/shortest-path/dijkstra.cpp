@@ -55,10 +55,11 @@ public:
   }
 
   //restorate any
-  vector<pair<int,int>> restoration(int t = -1){
-    vector<pair<int,int>> Ret;
+
+  vector<int> restoration(int t = -1){
+    vector<int> Ret;
     if(beg == -1 || (t != -1 && cost[t].second == -1)){
-      Ret.push_back({-1,-1});
+      Ret.push_back(-1);
       return Ret;
     }
     int ind = t;
@@ -73,8 +74,9 @@ public:
       }
       ind = tmpin;
     }
+    Ret.push_back(ind);
     while(beg != ind){
-      Ret.push_back({cost[ind].first,ind});
+      Ret.push_back({cost[ind].first});
       ind = cost[ind].first;
     }
     reverse(Ret.begin(),Ret.end());
@@ -84,5 +86,4 @@ public:
   T operator[](int i){
     return cost[i].second;
   }
-  
 };
