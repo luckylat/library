@@ -67,4 +67,15 @@ struct mat{
     }
     return res;
   }
+
+  friend ostream &operator<<(ostream &os, const mat &m){
+    for(int i = 0; m.h > i; i++){
+      for(int j = 0; m.w > j; j++){
+        os << m.x[i][j];
+        if(j+1 != m.w)cout << " ";
+      }
+      if(i+1 != m.h)cout << "\n";
+    }
+    return os;
+  }
 };

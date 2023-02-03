@@ -1,4 +1,4 @@
-//#define PROBLEM "https://judge.yosupo.jp/problem/matrix_product"
+#define PROBLEM "https://judge.yosupo.jp/problem/matrix_product"
 
 #include "../../cpp/template/template.cpp"
 
@@ -7,7 +7,7 @@
 
 int main(){
   int n,m,k;cin>>n>>m>>k;
-  mat<long long> A(n,m),B(m,k);
+  mat<mint> A(n,m),B(m,k);
   for(int i = 0; n > i; i++){
     for(int j = 0; m > j; j++){
       cin>>A[i][j];
@@ -18,5 +18,6 @@ int main(){
       cin>>B[i][j];
     }
   }
+  cout << A*B << endl;
 }
 
