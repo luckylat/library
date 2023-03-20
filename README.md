@@ -6,10 +6,10 @@
 本作品はCC0ライセンスによって許諾されています。ライセンスの内容を知りたい方は https://creativecommons.org/publicdomain/zero/1.0/deed.ja でご確認ください。
 
 ## コミットの流れ
-[lefthook](https://github.com/evilmartians/lefthook)を[インストール](https://github.com/evilmartians/lefthook/blob/master/docs/install.md)
+[lefthook](https://github.com/evilmartians/lefthook)を[インストール](https://github.com/evilmartians/lefthook/blob/master/docs/install.md)  
 git cloneした後に
 ```
 $ lefthook install
 ```
-を実行
+を実行  
 後は通常通りコミットすればコミット前にverifyを動かしてくれる
