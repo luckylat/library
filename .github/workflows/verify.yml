@@ -8,9 +8,12 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
-
+    
+    # https://github.com/online-judge-tools/verification-helper/issues/406
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
