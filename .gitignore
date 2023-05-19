@@ -3,3 +3,6 @@
 !*.*
 ac-library
 
+.ccls-cache/
+.DS_Store
+
