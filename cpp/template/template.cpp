@@ -1,3 +1,5 @@
+#pragma once
+
 //yukicoder@cpp17
 
 #include <iostream>
