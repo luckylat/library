@@ -20,7 +20,9 @@ struct BigInt{
       }
     }
   }
-  BigInt abs(BigInt p){
+  BigInt(int n): val(to_string(n)){}
+
+  BigInt abs(BigInt p) const {
     if(p.val[0] == '-'){
       p.val = p.val.substr(1,p.val.size()-1);
     }
@@ -29,7 +31,7 @@ struct BigInt{
   int size(){
     return (*this).val.length();
   }
-  BigInt SignTurn(BigInt p){
+  BigInt SignTurn(BigInt p) const {
     if(p.val[0] == '-'){
       p.val = p.val.substr(1,p.val.size()-1);
     }else{
@@ -37,7 +39,7 @@ struct BigInt{
     }
     return p;
   }
-  BigInt max(BigInt a,BigInt b){
+  BigInt max(BigInt a,BigInt b) const {
     if(a.val.size() > b.val.size()){
       return a;
     }else if(a.val.size() < b.val.size()){
@@ -55,7 +57,7 @@ struct BigInt{
     return a;
   }
 
-  BigInt operator+=(const BigInt &p){
+  BigInt operator+(const BigInt &p) const {
     BigInt z = *this;
     BigInt k = p;
     if(z.val[0] == '-' && p.val[0] == '-'){
@@ -91,7 +93,7 @@ struct BigInt{
     return z;
 
   }
-  BigInt operator-=(const BigInt &p){
+  BigInt operator-(const BigInt &p) const {
     BigInt z = *this;
     BigInt k = p;
     if(z.val[0] == '-' && k.val[0] == '-'){
@@ -136,7 +138,7 @@ struct BigInt{
     }
     return z;
   }
-  BigInt operator*=(const BigInt &p){
+  BigInt operator*(const BigInt &p) const {
     BigInt z = *this;
     BigInt k = p;
     bool minus = false;
@@ -165,17 +167,69 @@ struct BigInt{
       val.push_back(ret[i]+'0');
     }
     BigInt ans = (BigInt)val;
-    return (*this) = ans;
-
-    
+    return ans;
   }
-  BigInt operator+(const BigInt &p){return (*this) += p;}
-  BigInt operator-(const BigInt &p){return (*this) -= p;}
-  BigInt operator*(const BigInt &p){return (*this) *= p;}
 
-  bool operator==(const BigInt &p){return val == p.val;}
-  bool operator!=(const BigInt &p){return val != p.val;}
+  //Only N
+  BigInt operator/(const BigInt &p) const {
+    BigInt z = *this;
+    BigInt k = p;
+    assert(k != (BigInt)"0");
+    bool minus = false;
+    if((z.val[0] == '-') + (p.val[0] == '-') == 1)minus = true;
+    string Z = abs(z).val;
+    string K = abs(k).val;
+    BigInt rem = (BigInt)"0";
+    BigInt ans = (BigInt)"0";
+    // z / k
+    for(int i = 0; Z.size() > i; i++){
+      rem = rem*(BigInt)"10" + (BigInt)(Z[i]-'0');
+      int nw = 0;
+      while(rem >= k){
+        nw++;
+        rem -= k;
+      }
+      ans = ans*(BigInt)"10" + (BigInt)(nw);
+    }
+    return ans;
+  }
+  
+  BigInt operator%(const BigInt &p) const {
+    BigInt z = *this;
+    BigInt k = p;
+    assert(k != (BigInt)"0");
+    bool minus = false;
+    if((z.val[0] == '-') + (p.val[0] == '-') == 1)minus = true;
+    string Z = abs(z).val;
+    string K = abs(k).val;
+    BigInt rem = (BigInt)"0";
+    BigInt ans = (BigInt)"0";
+    // z / k
+    for(int i = 0; Z.size() > i; i++){
+      rem = rem*(BigInt)"10" + (BigInt)(Z[i]-'0');
+      int nw = 0;
+      while(rem >= k){
+        nw++;
+        rem -= k;
+      }
+      ans = ans*(BigInt)"10" + (BigInt)(nw);
+    }
+    return rem;
+  }
 
+  BigInt operator+=(const BigInt &p){return *this = (*this) + p;}
+  BigInt operator-=(const BigInt &p){return *this = (*this) - p;}
+  BigInt operator*=(const BigInt &p){return *this = (*this) * p;}
+  BigInt operator/=(const BigInt &p){return *this = (*this) / p;}
+  BigInt operator%=(const BigInt &p){return *this = (*this) % p;}
+
+  bool operator==(const BigInt &p)const{return val == p.val;}
+  bool operator!=(const BigInt &p)const{return val != p.val;}
+  bool operator<(const BigInt &p)const{return val != max(*this, p).val;}
+  bool operator<=(const BigInt &p)const{return (*this) == p || (*this) < p;}
+  bool operator>(const BigInt &p)const{return p.val != max(*this, p).val;}
+  bool operator>=(const BigInt &p)const{return (*this) == p || (*this) > p;}
+  
 
   friend ostream &operator<<(ostream &os, const BigInt &p){
     return os << p.val;
@@ -187,4 +241,3 @@ struct BigInt{
     return (is);
   }
 };
-using bigint = BigInt;
