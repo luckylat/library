@@ -1,7 +1,3 @@
-#include <functional>
-#include <vector>
-using namespace std;
-
 #include "../../data-structure/segment-tree/segment-tree.cpp"
 
 struct EulerTourForLCA {
