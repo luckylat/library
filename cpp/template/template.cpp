@@ -26,6 +26,8 @@
 
 #include <numeric>
 
+#include <functional>
+
 using namespace std;
 using ll = long long;
 using P = pair<ll,ll>;
