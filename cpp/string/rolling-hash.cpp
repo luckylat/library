@@ -50,10 +50,11 @@ struct RollingHash{
     t = x;
   }
 
+  //len(x) should be n
   pair<long long, long long> hash(string x){
     long long val1 = 0;
     long long val2 = 0;
-    for(int i = 0; t.size() > i; i++){
+    for(int i = 0; x.size() > i; i++){
       val1 = (val1*C.base + C.encode(x[i]))%MOD1;
       val2 = (val2*C.base + C.encode(x[i]))%MOD2;
     }
