@@ -22,7 +22,7 @@ struct SegmentTree{
     }
 
     void set(vector<T> x){
-      for(int i = 0; n > i; i++){
+      for(int i = 0; (int)x.size() > i; i++){
         update(i,x[i]);
       }
     }
