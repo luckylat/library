@@ -3,10 +3,10 @@
 #include "./point.hpp"
 #include "./line-segment.hpp"
 
-struct Linevec{
+struct LineVec{
   Point base;
   Vec vec;
-  Linevec(LineSegment ls){
+  LineVec(LineSegment ls){
     base = ls.first;
     vec = ls.second - ls.first;
   }

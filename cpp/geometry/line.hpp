@@ -7,7 +7,7 @@ struct Line{
   //ax+by+c=0 (required: a*a+b*b != 0)
   long double a,b,c;
   Line(long double a, long double b, long double c): a(a), b(b), c(c){}
-  Line(Linevec lv){
+  Line(LineVec lv){
     a = -lv.vec.y;
     b = lv.vec.x;
     c = -(a*lv.base.x + b*lv.base.y);
@@ -18,7 +18,7 @@ struct Line{
   }
 
   Line(LineSegment ls){
-    (*this) = (Linevec)(ls);
+    (*this) = (LineVec)(ls);
   }
   Line(Point a, Point b){
     LineSegment ls({a,b});
