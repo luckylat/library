@@ -1,8 +1,8 @@
-template <int mod>
 struct Combination {
   long long n_max;
+  int mod;
   vector<long long> fac, inv, finv;
-  Combination(int n):n_max(n), fac(n+1,1), inv(n+1,1), finv(n+1,1){
+  Combination(int n, int mod):n_max(n), mod(mod), fac(n+1,1), inv(n+1,1), finv(n+1,1){
     for(int i = 2; n > i; i++){
       fac[i] = (fac[i-1]*i)%mod;
       inv[i] = mod-((inv[mod%i]*(mod/i))%mod);
@@ -27,4 +27,3 @@ struct Combination {
     return C(n+r-1, r);
   }
 };
-using comb = Combination<MOD>;
