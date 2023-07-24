@@ -3,10 +3,8 @@
 #include "../template/template.cpp"
 #include "../math/combination.cpp"
 
-using comb2 = Combination<MODx>;
-
 int main(){
-  comb2 C(2000010);
+  Combination C(2000010, MODx);
   int q;cin>>q;
   char _;
   for(int i = 0; q > i; i++){
