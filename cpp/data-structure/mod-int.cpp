@@ -2,6 +2,7 @@ template <int mod>
 struct ModInt{
   int n;
   ModInt():n(0){}
+  ModInt(long long n_):n(n_ >= 0 ? n_%mod : mod - ((-n_)%mod) ){}
   ModInt(int n_):n(n_ >= 0 ? n_%mod : mod - ((-n_)%mod) ){}
 
   ModInt &operator+=(const ModInt &p){
@@ -60,7 +61,7 @@ struct ModInt{
   friend istream &operator>>(istream &is, ModInt &a){
     int64_t t;
     is >> t;
-    a = ModInt<mod> (t);
+    a = ModInt<mod> ((long long)t);
     return (is);
 
   }
