@@ -68,6 +68,15 @@ struct mat{
     return res;
   }
 
+  friend istream &operator>>(istream &is, mat &m){
+    for(int i = 0; m.h > i; i++){
+      for(int j = 0; m.w > j; j++){
+        is>>m.x[i][j];
+      }
+    }
+    return is;
+  }
+
   friend ostream &operator<<(ostream &os, const mat &m){
     for(int i = 0; m.h > i; i++){
       for(int j = 0; m.w > j; j++){
