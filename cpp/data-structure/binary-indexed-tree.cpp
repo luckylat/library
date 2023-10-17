@@ -5,12 +5,12 @@ struct BIT{//1_Indexed
   BIT(int n_):n(n_+1),bit(n,0){}
 
   T sum(int a){
-    int ret = 0;
+    T ret = 0;
     for(int i = a; i > 0; i -= i & -i) ret += bit[i];
     return ret;
   }
 
-  void add(int a,int w){
+  void add(int a,T w){
     for(int i = a; i <= n; i += i & -i)bit[i] += w;
   }
 
