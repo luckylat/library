@@ -2,7 +2,7 @@
 
 #include "../../cpp/template/template.cpp"
 
-#include "../../cpp/data-structure/mod-int.cpp"
+#include "../../cpp/data-structure/mod-int/mod-int.cpp"
 #include "../../cpp/math/matrix.cpp"
 
 int main(){
