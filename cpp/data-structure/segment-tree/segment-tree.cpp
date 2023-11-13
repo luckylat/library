@@ -65,6 +65,17 @@ struct SegmentTree{
       return f(vl,vr);
     }
 
+    void debug(){
+      int nw = 1;
+      int curr = 1;
+      cout << "---begin---" << endl;
+      for(int i = 0; 2*n-1 > i; i++){
+        cout << node[i] << " ";
+        if(nw == curr)cout << endl,nw *= 2, curr=1;
+        else curr++;
+      }
+      cout << "---end---" << endl;
+    }
 };
 
 template <typename T, typename F>
