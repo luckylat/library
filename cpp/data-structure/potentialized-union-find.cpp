@@ -22,8 +22,9 @@ struct PotentializedUnionFind {
     return weight_val[x];
   }
 
-  int diff(int x, int y){
-    return weight(y) - weight(x);
+  pair<bool,int> diff(int x, int y){
+    if(!same(x,y))return {false, 0};
+    return {true, weight(y) - weight(x)};
   }
 
   void unite(int a,int b,int c){
@@ -61,3 +62,4 @@ struct PotentializedUnionFind {
     return;
   }
 };
+using PUnionFind = PotentializedUnionFind;
