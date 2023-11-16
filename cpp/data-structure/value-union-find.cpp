@@ -3,8 +3,10 @@ struct ValueUnionFind {
   int n;
   vector<int> par;
   vector<T> cost;
+  int size;
+  
   //Todo: Costに対する二項演算も取れるようにする
-  ValueUnionFind(int n) : n(n),par((size_t)n,-1), cost((size_t)n,0){
+  ValueUnionFind(int n) : n(n),par((size_t)n,-1), cost((size_t)n), size(n){
     for(int i = 0; n > i; i++)par[i] = i;
   }
 
@@ -18,9 +20,9 @@ struct ValueUnionFind {
     int ra = root(a);
     int rb = root(b);
     if(ra==rb)return;
+    size--;
     par[ra] = rb;
     cost[rb] += cost[ra];
-    cost[ra] = 0;
   }
 
   bool same(int a, int b){
@@ -40,6 +42,11 @@ struct ValueUnionFind {
 
   void update(T x, int n){
     cost[root(n)] = x;
+  }
+
+  //出力関連
+  int groupSize(){
+    return size;
   }
 
   T operator[](int i){
