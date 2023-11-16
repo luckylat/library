@@ -135,10 +135,7 @@ struct mat{
         v[i][j] = gaussianMat[i][j+w];
       }
     }
-
     return {true, v};
-
-
   }
 
   friend istream &operator>>(istream &is, mat &m){
