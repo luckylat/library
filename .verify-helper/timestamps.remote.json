@@ -11,6 +11,7 @@
 "cpp/z_test/yosupo-lca.test.cpp": "2023-11-13 13:19:52 +0900",
 "cpp/z_test/yosupo-matrix_product.test.cpp": "2023-11-16 09:10:36 +0900",
 "cpp/z_test/yosupo-point_add_range_sum.test.cpp": "2023-11-13 13:19:52 +0900",
+"cpp/z_test/yosupo-primality_test.test.cpp": "2023-11-29 18:16:39 +0900",
 "cpp/z_test/yosupo-shortest_path.test.cpp": "2023-10-17 12:08:58 +0900",
 "cpp/z_test/yosupo-tree_diameter.test.cpp": "2023-10-17 12:08:58 +0900",
 "cpp/z_test/yosupo-unionfind.test.cpp": "2023-10-17 12:08:58 +0900",
