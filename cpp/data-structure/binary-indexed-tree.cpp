@@ -18,17 +18,19 @@ struct BIT{//1_Indexed
     return sum(l-1)-sum(r-1);
   }
 
+
   int lower_bound(T x){
     if(x <= 0){
       return 0;
     }
+    x--;
     int t = 1;
-    while(t*2 < n)t <<= 1;
-    int s = 0;
+    while(t < n)t <<= 1;
     int st = 0;
+    int base = 0;
     for(; t; t/=2){
-      if(st+t < n && bit[st+t] <= x){
-        x -= bit[t];
+      if(st+t <= n && base+bit[st+t] <= x){
+        base += bit[st+t];
         st += t;
       }
     }
