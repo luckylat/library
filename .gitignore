@@ -1,7 +1,11 @@
-*
-!*/
-!*.*
+.competitive-verifier/cache
+.competitive-verifier/bundled
+.verify-helper/cache
+
+.lefthook
+
 ac-library
+
 
 .ccls-cache/
 .DS_Store
