@@ -1,6 +1,6 @@
 .competitive-verifier/cache
 .competitive-verifier/bundled
-.verify-helper/cache
+.verify-helper
 
 .lefthook
 
