@@ -12,14 +12,14 @@ long long modmul(long long A, long long B){
 }
 
 long long modpow(long long A, long long B){
-  long long ret = 0;
-  long long nw = 1;
+  long long ret = 1;
+  long long mul = A;
   while(B){
     if(B%2 == 1){
-      ret = modmul(nw, ret);
+      ret = modmul(mul, ret);
     }
     B/=2;
-    nw = modmul(nw, nw);
+    mul = modmul(mul, mul);
   }
   return ret;
 }
