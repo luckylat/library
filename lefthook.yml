@@ -12,11 +12,65 @@
 #       tags: backend security
 #       run: bundle audit
 #
- pre-commit:
+pre-commit:
 #   parallel: true
-   commands:
-     oj-verify:
-       run: oj-verify run
+  piped: true
+  commands:
+    01_prepare:
+      run: if [ -d .lefthook ]; then rm -r .lefthook; fi; mkdir .lefthook
+    02_oj-resolve:
+      run: competitive-verifier oj-resolve > .lefthook/oj-resolve.json
+    03_verify:
+      run_group: verify
+    04_check:
+      glob: ".lefthook/verify_*.json"
+      run: competitive-verifier check {all_files}
+    05_clean:
+      run: rm -r .lefthook
+
+verify:
+  parallel: true
+  commands:
+    00_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 0 > .lefthook/verify_00.json
+    01_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 1 > .lefthook/verify_01.json
+    02_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 2 > .lefthook/verify_02.json
+    03_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 3 > .lefthook/verify_03.json
+    04_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 4 > .lefthook/verify_04.json
+    05_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 5 > .lefthook/verify_05.json
+    06_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 6 > .lefthook/verify_06.json
+    07_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 7 > .lefthook/verify_07.json
+    08_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 8 > .lefthook/verify_08.json
+    09_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 9 > .lefthook/verify_09.json
+    10_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 10 > .lefthook/verify_10.json
+    11_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 11 > .lefthook/verify_11.json
+    12_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 12 > .lefthook/verify_12.json
+    13_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 13 > .lefthook/verify_13.json
+    14_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 14 > .lefthook/verify_14.json
+    15_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 15 > .lefthook/verify_15.json
+    16_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 16 > .lefthook/verify_16.json
+    17_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 17 > .lefthook/verify_17.json
+    18_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 18 > .lefthook/verify_18.json
+    19_verify:
+      run: competitive-verifier verify --verify-json .lefthook/oj-resolve.json --split 20 --split-index 19 > .lefthook/verify_19.json
 #     eslint:
 #       glob: "*.{js,ts,jsx,tsx}"
 #       run: yarn eslint {staged_files}
