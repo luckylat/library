@@ -2,7 +2,13 @@ template<typename T>
 struct BIT{//1_Indexed
   int n;
   vector<T> bit;
+  BIT(){}
   BIT(int n_):n(n_+1),bit(n,0){}
+
+  void set(int n_){
+    n = n_;
+    bit.assign(n,0);
+  }
 
   T sum(int a){
     T ret = 0;
