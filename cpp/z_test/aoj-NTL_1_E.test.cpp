@@ -10,3 +10,4 @@ int main(){
   auto A = extgcd(a,b);
   cout << A.first << " " << A.second << endl;
 }
+

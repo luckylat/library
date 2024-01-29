@@ -1,8 +1,8 @@
 #include "binary-power-method.cpp"
 /*
- * true: 素数
- * false: 合成数
- */
+true: 素数
+false: 合成数
+*/
 template<typename T>
 bool MillerRabinCheck(T n){
   if(n == 1)return false;

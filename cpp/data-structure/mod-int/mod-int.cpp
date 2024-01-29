@@ -29,10 +29,10 @@ struct ModInt{
   ModInt operator/(const ModInt &p) const {return ModInt(*this) /= p;}
 
   bool operator==(const ModInt &p) const {return n==p.n;}
-	bool operator<(const ModInt &p) const {return n<p.n;}
-	bool operator>(const ModInt &p) const {return n>p.n;}
-	bool operator>=(const ModInt &p) const {return n>=p.n;}
-	bool operator<=(const ModInt &p) const {return n<=p.n;}
+  bool operator<(const ModInt &p) const {return n<p.n;}
+  bool operator>(const ModInt &p) const {return n>p.n;}
+  bool operator>=(const ModInt &p) const {return n>=p.n;}
+  bool operator<=(const ModInt &p) const {return n<=p.n;}
   bool operator!=(const ModInt &p) const {return n!=p.n;}
 
   ModInt inverse() const {

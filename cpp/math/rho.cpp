@@ -3,12 +3,12 @@
 using namespace std;
 template <typename T>
 struct Rho{
-	mt19937 mt; //32 bit version
-	T N;
+  mt19937 mt; //32 bit version
+  T N;
   vector<T> factor;
   //std::mt19937_64 mt(rnd()); //64 bit version
   Rho(T n):N(n){
-	  random_device rnd;
+    random_device rnd;
     mt.seed(rnd());
   }
 

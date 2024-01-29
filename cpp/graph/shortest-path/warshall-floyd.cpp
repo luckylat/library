@@ -14,7 +14,7 @@ public:
   int n;
   vector<vector<long long>> dist;//MAX以上なら辺はなし
   FloydWarshall(int n_,long long MAX = 2e18+1):n(n_),MAX(MAX),dist(n_,vector<long long>(n_,MAX)){
-  	for(int i = 0; n > i; i++){
+    for(int i = 0; n > i; i++){
       dist[i][i] = 0;
     }
   }

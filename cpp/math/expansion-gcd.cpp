@@ -10,3 +10,4 @@ pair<T,T> extgcd(T a,T b){
     return {1,0};
   }
 }
+

@@ -51,7 +51,7 @@ P ar8[8] = {{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
 template <typename T> vector<T> make_vector(size_t a, T b) { return vector<T>(a, b); }
 template <typename... Ts> auto make_vector(size_t a, Ts... ts) { return vector<decltype(make_vector(ts...))>(a, make_vector(ts...)); }
  
- /*
+/*
 確認ポイント
 cout << fixed << setprecision(n) << 小数計算//n桁の小数表記になる
 
@@ -60,19 +60,10 @@ min(max)_element(iter,iter)で一番小さい(大きい)値のポインタが帰
 count(iter,iter,int)でintがiterからiterの間にいくつあったかを取得できる
 */
 
-/*
-function corner below
-*/
-
-
-/*
-Function corner above
-*/
-
 /* comment outed because can cause bugs
 __attribute__((constructor))
 void initial() {
- cin.tie(0);
- ios::sync_with_stdio(false);
+  cin.tie(0);
+  ios::sync_with_stdio(false);
 }
 */

@@ -34,7 +34,7 @@ public:
   int n;
   vector<vector<vg>> A;
   vector<vector<vg>> Rev;
-	dijkstra(int n_):n(n_),A(n_),Rev(n_),cost(n_,{-1,-1}){}
+  dijkstra(int n_):n(n_),A(n_),Rev(n_),cost(n_,{-1,-1}){}
 
   //双方向
   void push(int s,int v,T c){
