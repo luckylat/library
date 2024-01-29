@@ -3,6 +3,7 @@
 .verify-helper
 
 .lefthook
+lefthook-local.yml
 
 ac-library
 

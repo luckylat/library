@@ -12,3 +12,4 @@ T uPow(T z,T n, T mod){
   }
   return ans;
 }
+

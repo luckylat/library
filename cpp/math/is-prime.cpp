@@ -6,3 +6,4 @@ bool isPrime(T n){
   }
   return true;
 }
+
