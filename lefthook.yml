@@ -16,6 +16,8 @@ pre-commit:
 #   parallel: true
   piped: true
   commands:
+    00_eclint:
+      run: eclint check */**/*
     01_prepare:
       run: if [ -d .lefthook ]; then rm -r .lefthook; fi; mkdir .lefthook
     02_oj-resolve:
