@@ -1,3 +1,4 @@
+#pragma once
 
 long long modadd(long long A, long long B){
   return (A+B)%MOD;

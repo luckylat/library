@@ -1,3 +1,5 @@
+#pragma once
+
 template <int mod>
 struct ModInt{
   int n;
@@ -53,6 +55,10 @@ struct ModInt{
       z >>= 1;
     }
     return ret;
+  }
+
+  int getMod() const {
+    return mod;
   }
 
   friend ostream &operator<<(ostream &os, const ModInt &p){

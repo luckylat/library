@@ -1,3 +1,5 @@
+#pragma once
+
 template <typename T>
 T uPow(T z,T n, T mod){
   T ans = 1;
@@ -12,3 +14,4 @@ T uPow(T z,T n, T mod){
   }
   return ans;
 }
+
