@@ -1,6 +1,5 @@
 // Ref: https://qiita.com/AngrySadEight/items/0dfde26060daaf6a2fda
 
-#include "../template/template.cpp"
 #include "./binary-power-method.cpp"
 #include "../data-structure/mod-int/mod-int.cpp"
 using namespace std;
