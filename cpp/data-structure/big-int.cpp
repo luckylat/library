@@ -1,3 +1,5 @@
+#include "../math/convolution.cpp"
+
 struct BigInt{
   string val;
   BigInt():val("0"){}
@@ -28,9 +30,20 @@ struct BigInt{
     }
     return p;
   }
+  
   int size(){
     return (*this).val.length();
   }
+
+  bool isZero(){
+    int i = 0;
+    if((*this).val[0] == '-')i = 1; 
+    for(; (*this).size() > i; i++){
+      if((*this).val[i] != '0')return false;
+    }
+    return true;
+  }
+
   BigInt SignTurn(BigInt p) const {
     if(p.val[0] == '-'){
       p.val = p.val.substr(1,p.val.size()-1);
@@ -145,26 +158,36 @@ struct BigInt{
     if((z.val[0] == '-') + (p.val[0] == '-') == 1)minus = true;
     string Z = abs(z).val;
     string K = abs(k).val;
-    //O(n^2)
-    reverse(Z.begin(),Z.end());
-    reverse(K.begin(),K.end());
-    vector<int> ret(Z.size()+K.size()+1,0);
-    for(int i = 0; Z.size() > i; i++){
-      for(int j = 0; K.size() > j; j++){
-        ret[i+j] += (Z[i]-'0')*(K[j]-'0');
-      }
-    }
-    for(int i = 0; ret.size() > i; i++){
-      ret[i+1] += ret[i]/10;
-      ret[i] = ret[i]%10;
-    }
-    while(ret[ret.size()-1] == '0')ret.pop_back();
-    reverse(ret.begin(),ret.end());
 
+    vector<mint> Zz(Z.size());
+    for(int i = 0; Z.size() > i; i++){
+      Zz[i] = Z[Z.size()-i-1]-'0';
+    }
+    vector<mint> Kk(K.size());
+    for(int i = 0; K.size() > i; i++){
+      Kk[i] = K[K.size()-i-1]-'0';
+    }
+
+    auto Cc = convolution(Zz, Kk);
+    vector<int> C(Cc.size());
+    for(int i = 0; Cc.size() > i; i++){
+      C[i] = Cc[i].n;
+    }
+    for(int i = 0; C.size() > i; i++){
+      if(C[i] >= 10 && i+1 == C.size()){
+        C.push_back(C[i]/10);
+      }else if(C[i] >= 10){
+        C[i+1] += C[i]/10;
+      }
+      C[i] = C[i]%10;
+    }
+    C.push_back(0);
+    while(C.size() != 1 && C[C.size()-1] == 0)C.pop_back();
+    bool isZero = (C.size() == 1 && C[0] == 0);
     string val;
-    if(minus)val.push_back('-');
-    for(int i = 0; ret.size() > i; i++){
-      val.push_back(ret[i]+'0');
+    if(minus && !isZero)val.push_back('-');
+    for(int i = 0; C.size() > i; i++){
+      val.push_back(C[C.size()-i-1]+'0');
     }
     BigInt ans = (BigInt)val;
     return ans;
@@ -241,3 +264,4 @@ struct BigInt{
     return (is);
   }
 };
+
