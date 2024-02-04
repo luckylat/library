@@ -208,12 +208,13 @@ struct BigInt{
     for(int i = 0; Z.size() > i; i++){
       rem = rem*(BigInt)"10" + (BigInt)(Z[i]-'0');
       int nw = 0;
-      while(rem >= k){
+      while(rem >= K){
         nw++;
-        rem -= k;
+        rem -= K;
       }
       ans = ans*(BigInt)"10" + (BigInt)(nw);
     }
+    if(minus && !ans.isZero())ans = SignTurn(ans);
     return ans;
   }
   
@@ -231,9 +232,9 @@ struct BigInt{
     for(int i = 0; Z.size() > i; i++){
       rem = rem*(BigInt)"10" + (BigInt)(Z[i]-'0');
       int nw = 0;
-      while(rem >= k){
+      while(rem >= K){
         nw++;
-        rem -= k;
+        rem -= K;
       }
       ans = ans*(BigInt)"10" + (BigInt)(nw);
     }
