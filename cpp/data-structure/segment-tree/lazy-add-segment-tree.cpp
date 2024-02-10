@@ -77,7 +77,7 @@ struct LazySegmentTree{
         r = n-1;
       }
       if(r < a || b < l){
-        return (1LL<<61);
+        return initer;
       }
       eval(k,l,r);
       if(a <= l && r <= b){
