@@ -36,16 +36,16 @@ using namespace std;
 using ll = long long;
 using P = pair<ll,ll>;
 
+
 const ll MOD = 998244353;
 const ll MODx = 1000000007;
 const int INF = (1<<30)-1;
 const ll LINF = (1LL<<62LL)-1;
 const double EPS = (1e-10);
 
+
 P ar4[4] = {{0,1},{0,-1},{1,0},{-1,0}};
 P ar8[8] = {{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
-
-
 
 
 template <typename T> vector<T> make_vector(size_t a, T b) { return vector<T>(a, b); }
