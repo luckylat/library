@@ -1,5 +1,5 @@
 struct charSet{
-  int base = 52;
+  int base = 62;
   int encode(char c){
     if('0' <= c && c <= '9'){
       return c-'0';
