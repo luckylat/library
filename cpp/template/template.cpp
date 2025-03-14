@@ -1,36 +1,7 @@
+//yukicoder@cpp17
 #pragma once
 
-//yukicoder@cpp17
-
-#include <iostream>
-#include <iomanip>
-
-#include <algorithm>
-
-#include <cmath>
-#include <cctype>
-#include <climits>
-#include <cassert>
-
-#include <string>
-#include <vector>
-#include <set>
-#include <stack>
-#include <queue>
-#include <map>
-
-#include <random>
-
-#include <bitset>
-
-#include <complex>
-
-#include <utility>
-
-#include <numeric>
-
-#include <functional>
-
+#include <bits/stdc++.h>
 
 using namespace std;
 using ll = long long;

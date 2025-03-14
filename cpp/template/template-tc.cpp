@@ -1,22 +1,5 @@
 //author:luckYrat(twitter:@luckYrat_)
-//#include <bits/stdc++.h>
-
-//def
-#include <iostream>
-
-#include <cmath>
-#include <algorithm>
-#include <iomanip>
-
-//array
-#include <vector>
-#include <set>
-#include <stack>
-#include <queue>
-#include <map>
-#include <utility>
-
-
+#include <bits/stdc++.h>
 
 using namespace std;
 
